@@ -90,15 +90,6 @@ nav {
 .upload-zone small { font-size: 0.6rem; color: var(--pink); }
 .upload-zone input[type="file"] { display: none; }
 
-/* Persistent notice banner */
-.persist-notice {
-  background: var(--pink-pale); border: 1px solid var(--border); border-left: 3px solid var(--red);
-  padding: 12px 18px; margin-bottom: 36px; font-size: 0.78rem; color: var(--gray); line-height: 1.6;
-  display: flex; align-items: flex-start; gap: 12px;
-}
-.persist-notice strong { color: var(--ink); }
-.persist-notice .notice-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
-
 /* Image wrapper */
 .img-frame {
   width: 100%; height: 220px; overflow: hidden;
@@ -214,13 +205,14 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
     <div class="hero-photo-wrap">
       <div class="photo-ring">
         <div class="photo-inner">
+          <!-- PROFILE IMAGE UPLOAD -->
           <div class="upload-zone" id="heroZone" onclick="document.getElementById('heroInput').click()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             <span>Upload Profile Photo</span>
             <small>Saved after refresh</small>
             <input type="file" id="heroInput" accept="image/*" onchange="saveImg(event,'hero-photo','heroZone','heroImg')">
           </div>
-          <img id="heroImg" src="" alt="Julius Sarah" style="display:none; width:100%; height:100%; object-fit:cover; cursor:pointer;" onclick="document.getElementById('heroInput').click()">
+          <img id="heroImg" src="images/profile.jpg" alt="Profile Photo" style="width:100%; height:100%; object-fit:cover; cursor:pointer; display:block;" onclick="document.getElementById('heroInput').click()">
         </div>
       </div>
       <div class="photo-badge">GetMyTechTips</div>
@@ -230,7 +222,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
   <div class="hero-right">
     <div class="hero-text">
       <div class="eyebrow">My Personal Birthday Wishlist</div>
-      <h1 class="hero-name">Julius <em>Sarah</em></h1>
+      <h1 class="hero-name">HAPPY BIRTHDAY<em>JULIUS SARAH</em></h1>
       <p class="hero-role">Web Developer &nbsp;&middot;&nbsp; Data Analyst</p>
       <div class="hero-divider"></div>
       <p class="hero-desc">Welcome. I am <strong>Anuniro Julius Sarah Ugochi</strong> A freelance Web Developer, Data Analyst, and Tech Speaker based in Port Harcourt, Nigeria. I build modern websites, analyze data to uncover meaningful insights, and share practical technology knowledge that empowers individuals and businesses. This wishlist represents tools, resources, and opportunities that will help me continue creating impactful solutions, producing valuable content, speaking at tech events, and serving my clients with excellence. Every gift, contribution, or opportunity big or small is an investment in my growth, and I sincerely appreciate your support. </p>
@@ -251,8 +243,6 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
     <div class="section-tag">Gift Registry</div>
     <h2 class="section-title">My Birthday Wishlist</h2>
 
-    
-
     <p class="section-sub">
       Choose any item and support however feels right pay directly, buy and deliver, or order online. Every gift is deeply appreciated.<br><br>
       <a href="https://selar.com/1jl79f5671" target="_blank">My Selar Store</a> &nbsp;&middot;&nbsp;
@@ -266,16 +256,16 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-0')">
           <div class="upload-zone" id="zone-card-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-0','zone-card-0','img-card-0')"></div>
-          <img id="img-card-0" src="" alt="" style="display:none;">
+          <img id="img-card-0" src="images/shopping.webp" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-0')">Change</button>
           <span class="card-category">Technology</span>
         </div>
         <div class="card-body">
           <div class="card-title">Phone Upgrade</div>
           <p class="card-desc">Currently on iPhone 11 Pro. Looking for an upgrade latest iPhone, Samsung Galaxy S series, or flagship Android.</p>
-          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">&#8358;400,000+</span></div>
+          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">$293</span></div>
           <div class="card-actions">
-            <button class="btn-support btn-pay" onclick="openModal('pay','Phone Upgrade','&#8358;400,000+')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
+            <button class="btn-support btn-pay" onclick="openModal('pay','Phone Upgrade','$293')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
             <button class="btn-support btn-deliver" onclick="openModal('deliver','Phone Upgrade')"><span class="btn-icon">&#9673;</span><div class="btn-label"><span>Buy &amp; Deliver</span><small>Call for delivery address</small></div></button>
             <button class="btn-support btn-online" onclick="openModal('online','Phone Upgrade')"><span class="btn-icon">&#9678;</span><div class="btn-label"><span>Order Online</span><small>Temu, Jumia &amp; more</small></div></button>
           </div>
@@ -287,16 +277,16 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-1')">
           <div class="upload-zone" id="zone-card-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-1','zone-card-1','img-card-1')"></div>
-          <img id="img-card-1" src="" alt="" style="display:none;">
+          <img id="img-card-1" src="images/download.jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-1')">Change</button>
           <span class="card-category">Technology</span>
         </div>
         <div class="card-body">
           <div class="card-title">Laptop Upgrade</div>
           <p class="card-desc">Running Windows 11 Pro. Need a higher-spec machine  more RAM, faster CPU and GPU for development and content creation.</p>
-          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">&#8358;700,000+</span></div>
+          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">$600</span></div>
           <div class="card-actions">
-            <button class="btn-support btn-pay" onclick="openModal('pay','Laptop Upgrade','&#8358;700,000+')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
+            <button class="btn-support btn-pay" onclick="openModal('pay','Laptop Upgrade','$600')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
             <button class="btn-support btn-deliver" onclick="openModal('deliver','Laptop Upgrade')"><span class="btn-icon">&#9673;</span><div class="btn-label"><span>Buy &amp; Deliver</span><small>Call for delivery address</small></div></button>
             <button class="btn-support btn-online" onclick="openModal('online','Laptop Upgrade')"><span class="btn-icon">&#9678;</span><div class="btn-label"><span>Order Online</span><small>Temu, Jumia &amp; more</small></div></button>
           </div>
@@ -308,16 +298,16 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-2')">
           <div class="upload-zone" id="zone-card-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-2','zone-card-2','img-card-2')"></div>
-          <img id="img-card-2" src="" alt="" style="display:none;">
+          <img id="img-card-2" src="images/download (1).jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-2')">Change</button>
           <span class="card-category">Accessories</span>
         </div>
         <div class="card-body">
           <div class="card-title">Power Bank</div>
           <p class="card-desc">A high-capacity 20,000mAh+ power bank with fast charging support. Essential for staying powered throughout the day.</p>
-          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">&#8358;25,000+</span></div>
+          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">$18.27</span></div>
           <div class="card-actions">
-            <button class="btn-support btn-pay" onclick="openModal('pay','Power Bank','&#8358;25,000+')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
+            <button class="btn-support btn-pay" onclick="openModal('pay','Power Bank','$18.27')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
             <button class="btn-support btn-deliver" onclick="openModal('deliver','Power Bank')"><span class="btn-icon">&#9673;</span><div class="btn-label"><span>Buy &amp; Deliver</span><small>Call for delivery address</small></div></button>
             <button class="btn-support btn-online" onclick="openModal('online','Power Bank')"><span class="btn-icon">&#9678;</span><div class="btn-label"><span>Order Online</span><small>Temu, Jumia &amp; more</small></div></button>
           </div>
@@ -329,16 +319,16 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-3')">
           <div class="upload-zone" id="zone-card-3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-3','zone-card-3','img-card-3')"></div>
-          <img id="img-card-3" src="" alt="" style="display:none;">
+          <img id="img-card-3" src="images/download (2).jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-3')">Change</button>
           <span class="card-category">Connectivity</span>
         </div>
         <div class="card-body">
           <div class="card-title">Unlimited Wi-Fi</div>
           <p class="card-desc">Monthly or yearly unlimited internet subscription. Reliable high-speed internet is the foundation of everything I do.</p>
-          <div class="card-price"><span class="price-label">Monthly Est.</span><span class="price-amount">&#8358;30,000+</span></div>
+          <div class="card-price"><span class="price-label">Monthly Est.</span><span class="price-amount">$22.00</span></div>
           <div class="card-actions">
-            <button class="btn-support btn-pay" onclick="openModal('pay','Unlimited Wi-Fi','&#8358;30,000/month')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
+            <button class="btn-support btn-pay" onclick="openModal('pay','Unlimited Wi-Fi','$22.00/month')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
             <button class="btn-support btn-deliver" onclick="openModal('deliver','Unlimited Wi-Fi')"><span class="btn-icon">&#9673;</span><div class="btn-label"><span>Buy &amp; Deliver</span><small>Call for delivery address</small></div></button>
             <button class="btn-support btn-online" onclick="openModal('online','Unlimited Wi-Fi')"><span class="btn-icon">&#9678;</span><div class="btn-label"><span>Order Online</span><small>Temu, Jumia &amp; more</small></div></button>
           </div>
@@ -350,16 +340,16 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-4')">
           <div class="upload-zone" id="zone-card-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-4','zone-card-4','img-card-4')"></div>
-          <img id="img-card-4" src="" alt="" style="display:none;">
+          <img id="img-card-4" src="images/images.jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-4')">Change</button>
           <span class="card-category">Workspace</span>
         </div>
         <div class="card-body">
           <div class="card-title">Work Setup</div>
           <p class="card-desc">Complete desk upgrade  monitor, keyboard, mouse, ring light, microphone stand, and ergonomic accessories for the ultimate developer and creator workspace.</p>
-          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">&#8358;200,000+</span></div>
+          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">$150.00</span></div>
           <div class="card-actions">
-            <button class="btn-support btn-pay" onclick="openModal('pay','Work Setup','&#8358;200,000+')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
+            <button class="btn-support btn-pay" onclick="openModal('pay','Work Setup','$150.00')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
             <button class="btn-support btn-deliver" onclick="openModal('deliver','Work Setup')"><span class="btn-icon">&#9673;</span><div class="btn-label"><span>Buy &amp; Deliver</span><small>Call for delivery address</small></div></button>
             <button class="btn-support btn-online" onclick="openModal('online','Work Setup')"><span class="btn-icon">&#9678;</span><div class="btn-label"><span>Order Online</span><small>Temu, Jumia &amp; more</small></div></button>
           </div>
@@ -371,16 +361,16 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-5')">
           <div class="upload-zone" id="zone-card-5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-5','zone-card-5','img-card-5')"></div>
-          <img id="img-card-5" src="" alt="" style="display:none;">
+          <img id="img-card-5" src="images/shopping (1).webp" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-5')">Change</button>
           <span class="card-category">Fashion</span>
         </div>
         <div class="card-body">
           <div class="card-title">2-Piece Suit Set</div>
           <p class="card-desc">Two professional suit sets matching trousers and shirts. Smart and elegant for conferences, speaking engagements, and client meetings.</p>
-          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">&#8358;80,000+</span></div>
+          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">$59.99</span></div>
           <div class="card-actions">
-            <button class="btn-support btn-pay" onclick="openModal('pay','2-Piece Suit Set','&#8358;80,000+')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
+            <button class="btn-support btn-pay" onclick="openModal('pay','2-Piece Suit Set','$59.99')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
             <button class="btn-support btn-deliver" onclick="openModal('deliver','2-Piece Suit Set')"><span class="btn-icon">&#9673;</span><div class="btn-label"><span>Buy &amp; Deliver</span><small>Call for delivery address</small></div></button>
             <button class="btn-support btn-online" onclick="openModal('online','2-Piece Suit Set')"><span class="btn-icon">&#9678;</span><div class="btn-label"><span>Order Online</span><small>Temu, Jumia &amp; more</small></div></button>
           </div>
@@ -392,16 +382,16 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-6')">
           <div class="upload-zone" id="zone-card-6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-6','zone-card-6','img-card-6')"></div>
-          <img id="img-card-6" src="" alt="" style="display:none;">
+          <img id="img-card-6" src="images/download (3).jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-6')">Change</button>
           <span class="card-category">Fashion</span>
         </div>
         <div class="card-body">
           <div class="card-title">Red &amp; Black Heels</div>
           <p class="card-desc">A stunning pair of red and black heels  refined enough for speaking events and striking enough to make an impression.</p>
-          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">&#8358;25,000+</span></div>
+          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">$18.27</span></div>
           <div class="card-actions">
-            <button class="btn-support btn-pay" onclick="openModal('pay','Red & Black Heels','&#8358;25,000+')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
+            <button class="btn-support btn-pay" onclick="openModal('pay','Red & Black Heels','$18.27')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
             <button class="btn-support btn-deliver" onclick="openModal('deliver','Red & Black Heels')"><span class="btn-icon">&#9673;</span><div class="btn-label"><span>Buy &amp; Deliver</span><small>Call for delivery address</small></div></button>
             <button class="btn-support btn-online" onclick="openModal('online','Red & Black Heels')"><span class="btn-icon">&#9678;</span><div class="btn-label"><span>Order Online</span><small>Temu, Jumia &amp; more</small></div></button>
           </div>
@@ -413,39 +403,39 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-7')">
           <div class="upload-zone" id="zone-card-7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-7','zone-card-7','img-card-7')"></div>
-          <img id="img-card-7" src="" alt="" style="display:none;">
+          <img id="img-card-7" src="images/shopping (2).webp" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-7')">Change</button>
           <span class="card-category">Fashion</span>
         </div>
         <div class="card-body">
           <div class="card-title">A Quality Handbag</div>
           <p class="card-desc">A refined handbag or structured tote sophisticated for formal events and practical for carrying tech essentials.</p>
-          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">&#8358;15,000+</span></div>
+          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">$10.96</span></div>
           <div class="card-actions">
-            <button class="btn-support btn-pay" onclick="openModal('pay','A Quality Handbag','&#8358;15,000+')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
+            <button class="btn-support btn-pay" onclick="openModal('pay','A Quality Handbag','$10.96')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
             <button class="btn-support btn-deliver" onclick="openModal('deliver','A Quality Handbag')"><span class="btn-icon">&#9673;</span><div class="btn-label"><span>Buy &amp; Deliver</span><small>Call for delivery address</small></div></button>
             <button class="btn-support btn-online" onclick="openModal('online','A Quality Handbag')"><span class="btn-icon">&#9678;</span><div class="btn-label"><span>Order Online</span><small>Temu, Jumia &amp; more</small></div></button>
           </div>
         </div>
       </div>
 
-      <!-- 9. CANTONS & BISCUITS -->
+      <!-- 9. Passport -->
       <div class="wish-card">
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-8')">
           <div class="upload-zone" id="zone-card-8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-8','zone-card-8','img-card-8')"></div>
-          <img id="img-card-8" src="" alt="" style="display:none;">
+          <img id="img-card-8" src="images/passport.jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-8')">Change</button>
           <span class="card-category">Treats</span>
         </div>
         <div class="card-body">
-          <div class="card-title">Cantons Of Juices &amp; Biscuits</div>
-          <p class="card-desc">A lovely assorted selection of Juicesand biscuits  the perfect treat to enjoy while working late into the night on projects.</p>
-          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">&#8358;10,000</span></div>
+          <div class="card-title">Passport</div>
+          <p class="card-desc">A valid passport for international travel, ensuring smooth entry into foreign countries.</p>
+          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">$200</span></div>
           <div class="card-actions">
-            <button class="btn-support btn-pay" onclick="openModal('pay','Cantons & Biscuits','&#8358;10,000')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
-            <button class="btn-support btn-deliver" onclick="openModal('deliver','Cantons & Biscuits')"><span class="btn-icon">&#9673;</span><div class="btn-label"><span>Buy &amp; Deliver</span><small>Call for delivery address</small></div></button>
-            <button class="btn-support btn-online" onclick="openModal('online','Cantons & Biscuits')"><span class="btn-icon">&#9678;</span><div class="btn-label"><span>Order Online</span><small>Jumia Food &amp; more</small></div></button>
+            <button class="btn-support btn-pay" onclick="openModal('pay','Passport','$200')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
+            <button class="btn-support btn-deliver" onclick="openModal('deliver','Passport')"><span class="btn-icon">&#9673;</span><div class="btn-label"><span>Buy &amp; Deliver</span><small>Call for delivery address</small></div></button>
+            <button class="btn-support btn-online" onclick="openModal('online','Passport')"><span class="btn-icon">&#9678;</span><div class="btn-label"><span>Order Online</span><small>Jumia Food &amp; more</small></div></button>
           </div>
         </div>
       </div>
@@ -455,16 +445,16 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-9')">
           <div class="upload-zone" id="zone-card-9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-9','zone-card-9','img-card-9')"></div>
-          <img id="img-card-9" src="" alt="" style="display:none;">
+          <img id="img-card-9" src="images/images.webp" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-9')">Change</button>
           <span class="card-category">Treats</span>
         </div>
         <div class="card-body">
           <div class="card-title">A Beautiful Cake</div>
           <p class="card-desc">A celebration cake  because milestones deserve to be marked. It's my birthday on 17th July, cake is always welcome.</p>
-          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">&#8358;20,000</span></div>
+          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">$14.61</span></div>
           <div class="card-actions">
-            <button class="btn-support btn-pay" onclick="openModal('pay','A Beautiful Cake','&#8358;20,000')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
+            <button class="btn-support btn-pay" onclick="openModal('pay','A Beautiful Cake','$14.61')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
             <button class="btn-support btn-deliver" onclick="openModal('deliver','A Beautiful Cake')"><span class="btn-icon">&#9673;</span><div class="btn-label"><span>Buy &amp; Deliver</span><small>Call for delivery address</small></div></button>
             <button class="btn-support btn-online" onclick="openModal('online','A Beautiful Cake')"><span class="btn-icon">&#9678;</span><div class="btn-label"><span>Order Online</span><small>Jumia &amp; local bakers</small></div></button>
           </div>
@@ -476,16 +466,16 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-10')">
           <div class="upload-zone" id="zone-card-10"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-10','zone-card-10','img-card-10')"></div>
-          <img id="img-card-10" src="" alt="" style="display:none;">
+          <img id="img-card-10" src="images/download (4).jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-10')">Change</button>
           <span class="card-category">Stationery</span>
         </div>
         <div class="card-body">
           <div class="card-title">Quality Jotter / Notebook</div>
           <p class="card-desc">A premium hardcover jotter for capturing ideas, client briefs, course outlines, and creative planning. My best ideas still start on paper.</p>
-          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">&#8358;5,000</span></div>
+          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">$3.67</span></div>
           <div class="card-actions">
-            <button class="btn-support btn-pay" onclick="openModal('pay','Quality Jotter','&#8358;5,000')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
+            <button class="btn-support btn-pay" onclick="openModal('pay','Quality Jotter','$3.67')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
             <button class="btn-support btn-deliver" onclick="openModal('deliver','Quality Jotter')"><span class="btn-icon">&#9673;</span><div class="btn-label"><span>Buy &amp; Deliver</span><small>Call for delivery address</small></div></button>
             <button class="btn-support btn-online" onclick="openModal('online','Quality Jotter')"><span class="btn-icon">&#9678;</span><div class="btn-label"><span>Order Online</span><small>Jumia, Konga &amp; more</small></div></button>
           </div>
@@ -497,7 +487,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-11')">
           <div class="upload-zone" id="zone-card-11"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-11','zone-card-11','img-card-11')"></div>
-          <img id="img-card-11" src="" alt="" style="display:none;">
+          <img id="img-card-11" src="images/Speech.jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-11')">Change</button>
           <span class="card-category">Professional Dev</span>
         </div>
@@ -506,10 +496,9 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
           <p class="card-desc">Sponsorship or gifted access to attend a tech conference — locally or internationally. Networking, learning, and representation matter deeply in my career journey.</p>
           <div class="card-price"><span class="price-label">Varies</span><span class="price-amount">&#8358;$0</span></div>
           <div class="card-actions">
-            <button class="btn-support btn-pay" onclick="openModal('pay','Tech Conference Invite','&#8358;50,000+')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
+            <button class="btn-support btn-pay" onclick="openModal('pay','Tech Conference Invite','&#8358;$')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
             <button class="btn-support btn-deliver" onclick="openModal('deliver','Tech Conference Invite')"><span class="btn-icon">&#9673;</span><div class="btn-label"><span>Send the Invite</span><small>Contact me directly</small></div></button>
-            <button class="btn-support btn-online" onclick="openModal('online','Tech Conference Invite')"><span class="btn-icon">&#9678;</span><div class="btn-label"><span>Order Online</span><small>Purchase &amp; forward ticket</small></div></button>
-          </div>
+             </div>
         </div>
       </div>
 
@@ -518,16 +507,16 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-12')">
           <div class="upload-zone" id="zone-card-12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-12','zone-card-12','img-card-12')"></div>
-          <img id="img-card-12" src="" alt="" style="display:none;">
+          <img id="img-card-12" src="images/download (5).jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-12')">Change</button>
           <span class="card-category">Accessories</span>
         </div>
         <div class="card-body">
           <div class="card-title">Customized Necklace / Accessories</div>
           <p class="card-desc">A personalized necklace or accessories set engraved or styled with my name — <em>Julius Sarah</em>. Meaningful, wearable, and completely me.</p>
-          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">&#8358;35,000+</span></div>
+          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">$25.57</span></div>
           <div class="card-actions">
-            <button class="btn-support btn-pay" onclick="openModal('pay','Customized Necklace / Accessories','&#8358;35,000+')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
+            <button class="btn-support btn-pay" onclick="openModal('pay','Customized Necklace / Accessories','$25.57')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
             <button class="btn-support btn-deliver" onclick="openModal('deliver','Customized Necklace / Accessories')"><span class="btn-icon">&#9673;</span><div class="btn-label"><span>Buy &amp; Deliver</span><small>Call for delivery address</small></div></button>
             <button class="btn-support btn-online" onclick="openModal('online','Customized Necklace / Accessories')"><span class="btn-icon">&#9678;</span><div class="btn-label"><span>Order Online</span><small>Jumia, Etsy &amp; local artisans</small></div></button>
           </div>
@@ -540,14 +529,15 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
 
 <div class="stripe"></div>
 
+
 <section id="certs" class="section alt">
   <div class="section-inner">
     <div class="section-tag">Credentials</div>
     <h2 class="section-title">My Certificates</h2>
-    <p class="section-sub">Professional certifications that reflect the skills and dedication I bring to every project. Click any image area to upload your certificate — it will stay after refresh.</p>
+    <p class="section-sub">Professional certifications that reflect the skills and dedication I bring to every project.</p>
     <div class="certs-grid">
 
-      <!-- CERT 1 -->
+      <!-- CERT 1 - Full-Stack Web Development -->
       <div class="cert-card">
         <div class="cert-img-frame" onclick="triggerCert('cert-0')">
           <div class="upload-zone" id="zone-cert-0" style="height:190px;">
@@ -555,7 +545,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
             <span>Upload Certificate</span><small>Saved after refresh</small>
             <input type="file" id="input-cert-0" accept="image/*" onchange="saveCert(event,'cert-0','zone-cert-0','img-cert-0')">
           </div>
-          <img id="img-cert-0" src="" alt="" style="display:none; width:100%; height:100%; object-fit:cover;">
+          <img id="img-cert-0" src="images/web cert.jpeg" alt="Full-Stack Web Development Certificate" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerCert('cert-0')">Change</button>
         </div>
         <div class="cert-body">
@@ -566,7 +556,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
         <div class="cert-ribbon">Certified</div>
       </div>
 
-      <!-- CERT 2 -->
+      <!-- CERT 2 - Data Analytics -->
       <div class="cert-card">
         <div class="cert-img-frame" onclick="triggerCert('cert-1')">
           <div class="upload-zone" id="zone-cert-1" style="height:190px;">
@@ -574,18 +564,18 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
             <span>Upload Certificate</span><small>Saved after refresh</small>
             <input type="file" id="input-cert-1" accept="image/*" onchange="saveCert(event,'cert-1','zone-cert-1','img-cert-1')">
           </div>
-          <img id="img-cert-1" src="" alt="" style="display:none; width:100%; height:100%; object-fit:cover;">
+          <img id="img-cert-1" src="images/Data cert.jpeg" alt="Data Analytics Certificate" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerCert('cert-1')">Change</button>
         </div>
         <div class="cert-body">
           <div class="cert-name">Data Analytics</div>
-          <div class="cert-issuer">OneStop Technology Company</div>
-          <div class="cert-desc">Excel, SQL, Python (Pandas), and data visualization — extracting insights and communicating them through clean, structured analysis.</div>
+          <div class="cert-issuer">OneStop Technology Institute</div>
+          <div class="cert-desc">Excel, SQL, Python (Pandas), Tableau, and data visualization — extracting insights and communicating them through clean, structured analysis.</div>
         </div>
         <div class="cert-ribbon">Certified</div>
       </div>
 
-      <!-- CERT 3 -->
+      <!-- CERT 3 - Computer Appreciation -->
       <div class="cert-card">
         <div class="cert-img-frame" onclick="triggerCert('cert-2')">
           <div class="upload-zone" id="zone-cert-2" style="height:190px;">
@@ -593,7 +583,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
             <span>Upload Certificate</span><small>Saved after refresh</small>
             <input type="file" id="input-cert-2" accept="image/*" onchange="saveCert(event,'cert-2','zone-cert-2','img-cert-2')">
           </div>
-          <img id="img-cert-2" src="" alt="" style="display:none; width:100%; height:100%; object-fit:cover;">
+          <img id="img-cert-2" src="images/microsoft.jpeg" alt="Computer Appreciation Certificate" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerCert('cert-2')">Change</button>
         </div>
         <div class="cert-body">
@@ -632,10 +622,14 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
 </div>
 
 <script>
+// ===== YOUR EXACT ACCOUNT DETAILS =====
 const ME = {
-  bank: "Access Bank",
-  accountName: "Anuniro Ugochi Sarah",
-  accountNumber: "1478125374",
+  bank1: "Access Bank",
+  accountName1: "Anuniro Ugochi Sarah",
+  accountNumber1: "1478125374",
+  bank2: "9 Payment Service Bank",
+  accountName2: "ANUNIRO UGOCHI SARAH",
+  accountNumber2: "6091263647",
   phone: "09045831170",
   email: "juliussrah237@gmail.com",
   jumia: "https://www.jumia.com.ng",
@@ -652,7 +646,6 @@ function saveImg(event, key, zoneId, imgId) {
   reader.onload = function(e) {
     const data = e.target.result;
     try { localStorage.setItem(STORAGE_PREFIX + key, data); } catch(err) {
-      // localStorage full — images are large; show without saving
       console.warn('localStorage full, image not persisted');
     }
     showImg(zoneId, imgId, data);
@@ -664,30 +657,72 @@ function showImg(zoneId, imgId, src) {
   const zone = document.getElementById(zoneId);
   const img = document.getElementById(imgId);
   if (zone) zone.style.display = 'none';
-  if (img) { img.src = src; img.style.display = 'block'; }
+  if (img) { 
+    img.src = src; 
+    img.style.display = 'block'; 
+  }
 }
 
 function loadAllSaved() {
-  // Load wishlist card images
+  // Load wishlist card images (13 items: card-0 to card-12)
   for (let i = 0; i <= 12; i++) {
     const key = 'card-' + i;
     const data = localStorage.getItem(STORAGE_PREFIX + key);
-    if (data) showImg('zone-' + key, 'img-' + key, data);
+    if (data) {
+      showImg('zone-' + key, 'img-' + key, data);
+    } else {
+      // If no saved image, make sure the default image shows
+      const img = document.getElementById('img-' + key);
+      if (img && img.src && img.src !== '') {
+        img.style.display = 'block';
+      }
+      // Hide the upload zone if image has src
+      const zone = document.getElementById('zone-' + key);
+      if (zone && img && img.src && img.src !== '') {
+        zone.style.display = 'none';
+      }
+    }
   }
   // Load hero photo
   const hero = localStorage.getItem(STORAGE_PREFIX + 'hero-photo');
-  if (hero) showImg('heroZone', 'heroImg', hero);
-  // Load cert images
+  if (hero) {
+    showImg('heroZone', 'heroImg', hero);
+  } else {
+    // Show default hero image
+    const img = document.getElementById('heroImg');
+    if (img && img.src && img.src !== '') {
+      img.style.display = 'block';
+    }
+    const zone = document.getElementById('heroZone');
+    if (zone && img && img.src && img.src !== '') {
+      zone.style.display = 'none';
+    }
+  }
+  // Load cert images (3 items: cert-0 to cert-2)
   for (let i = 0; i <= 2; i++) {
     const key = 'cert-' + i;
     const data = localStorage.getItem(STORAGE_PREFIX + key);
-    if (data) showImg('zone-' + key, 'img-' + key, data);
+    if (data) {
+      showImg('zone-' + key, 'img-' + key, data);
+    } else {
+      const img = document.getElementById('img-' + key);
+      if (img && img.src && img.src !== '') {
+        img.style.display = 'block';
+      }
+      const zone = document.getElementById('zone-' + key);
+      if (zone && img && img.src && img.src !== '') {
+        zone.style.display = 'none';
+      }
+    }
   }
 }
 
 function triggerUpload(key) {
   const zone = document.getElementById('zone-' + key);
-  zone.querySelector('input[type="file"]').click();
+  if (zone) {
+    const input = zone.querySelector('input[type="file"]');
+    if (input) input.click();
+  }
 }
 
 function saveCert(event, key, zoneId, imgId) {
@@ -695,9 +730,11 @@ function saveCert(event, key, zoneId, imgId) {
 }
 
 function triggerCert(key) {
-  document.getElementById('input-' + key).click();
+  const input = document.getElementById('input-' + key);
+  if (input) input.click();
 }
 
+// Load all saved images on page load
 window.addEventListener('DOMContentLoaded', loadAllSaved);
 
 /* ── MODAL ── */
@@ -713,9 +750,18 @@ function openModal(type, item, price = '') {
     html = `
       <div class="modal-row"><span class="modal-lbl">Item</span><span class="modal-val">${item}</span></div>
       <div class="modal-row"><span class="modal-lbl">Est. Price</span><span class="modal-val hl">${price}</span></div>
-      <div class="modal-row"><span class="modal-lbl">Bank</span><span class="modal-val">${ME.bank}</span></div>
-      <div class="modal-row"><span class="modal-lbl">Account Name</span><span class="modal-val">${ME.accountName}</span></div>
-      <div class="modal-row"><span class="modal-lbl">Account Number</span><span class="modal-val hl">${ME.accountNumber}</span></div>
+      <div style="background:var(--pink-pale); padding:12px 14px; border-radius:8px; margin:10px 0; border-left:3px solid var(--red);">
+        <div style="font-weight:700; color:var(--red); font-size:0.75rem; margin-bottom:6px;">Option 1:</div>
+        <div class="modal-row" style="border-bottom:1px solid var(--border);"><span class="modal-lbl">Bank</span><span class="modal-val">${ME.bank1}</span></div>
+        <div class="modal-row" style="border-bottom:1px solid var(--border);"><span class="modal-lbl">Account Name</span><span class="modal-val">${ME.accountName1}</span></div>
+        <div class="modal-row" style="border-bottom:none;"><span class="modal-lbl">Account Number</span><span class="modal-val hl">${ME.accountNumber1}</span></div>
+      </div>
+      <div style="background:var(--pink-pale); padding:12px 14px; border-radius:8px; margin:10px 0; border-left:3px solid var(--pink);">
+        <div style="font-weight:700; color:var(--red); font-size:0.75rem; margin-bottom:6px;">Option 2:</div>
+        <div class="modal-row" style="border-bottom:1px solid var(--border);"><span class="modal-lbl">Bank</span><span class="modal-val">${ME.bank2}</span></div>
+        <div class="modal-row" style="border-bottom:1px solid var(--border);"><span class="modal-lbl">Account Name</span><span class="modal-val">${ME.accountName2}</span></div>
+        <div class="modal-row" style="border-bottom:none;"><span class="modal-lbl">Account Number</span><span class="modal-val hl">${ME.accountNumber2}</span></div>
+      </div>
       <div class="modal-note"><strong>Thank you so much.</strong> Once your transfer is complete, please send proof of payment to <strong>${ME.email}</strong> or WhatsApp me on <strong>${ME.phone}</strong> with your name so I can thank you personally.</div>`;
   } else if (type === 'deliver') {
     html = `
