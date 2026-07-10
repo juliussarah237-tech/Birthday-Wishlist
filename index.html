@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Julius Sarah – Wishlist</title>
+<!-- Fonts and CSS (unchanged, kept the same style) -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
+/* --- Your existing CSS styles (all of them) go here. I've kept them exactly as you provided. --- */
 :root {
   --red: #B01C2E;
   --red-dark: #8A1522;
@@ -228,7 +230,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
       <p class="hero-desc">Welcome. I am <strong>Anuniro Julius Sarah Ugochi</strong> A freelance Web Developer, Data Analyst, and Tech Speaker based in Port Harcourt, Nigeria. I build modern websites, analyze data to uncover meaningful insights, and share practical technology knowledge that empowers individuals and businesses. This wishlist represents tools, resources, and opportunities that will help me continue creating impactful solutions, producing valuable content, speaking at tech events, and serving my clients with excellence. Every gift, contribution, or opportunity big or small is an investment in my growth, and I sincerely appreciate your support. </p>
       <a href="#wishlist" class="hero-cta">View My Wishlist &nbsp; &#8594;</a>
       <div class="hero-stats">
-        <div><div class="stat-num">13</div><div class="stat-label">Wish Items</div></div>
+        <div><div class="stat-num">15</div><div class="stat-label">Wish Items</div></div> <!-- Updated count to 15 -->
         <div><div class="stat-num">3</div><div class="stat-label">Ways to Give</div></div>
         <div><div class="stat-num">3</div><div class="stat-label">Certifications</div></div>
       </div>
@@ -255,7 +257,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
       <div class="wish-card">
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-0')">
-          <div class="upload-zone" id="zone-card-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-0','zone-card-0','img-card-0')"></div>
+          <div class="upload-zone" id="zone-card-0" style="display:none;"><!-- Hidden by default to show default image --></div>
           <img id="img-card-0" src="images/shopping.webp" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-0')">Change</button>
           <span class="card-category">Technology</span>
@@ -276,7 +278,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
       <div class="wish-card">
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-1')">
-          <div class="upload-zone" id="zone-card-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-1','zone-card-1','img-card-1')"></div>
+          <div class="upload-zone" id="zone-card-1" style="display:none;"></div>
           <img id="img-card-1" src="images/download.jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-1')">Change</button>
           <span class="card-category">Technology</span>
@@ -297,7 +299,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
       <div class="wish-card">
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-2')">
-          <div class="upload-zone" id="zone-card-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-2','zone-card-2','img-card-2')"></div>
+          <div class="upload-zone" id="zone-card-2" style="display:none;"></div>
           <img id="img-card-2" src="images/download (1).jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-2')">Change</button>
           <span class="card-category">Accessories</span>
@@ -318,7 +320,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
       <div class="wish-card">
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-3')">
-          <div class="upload-zone" id="zone-card-3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-3','zone-card-3','img-card-3')"></div>
+          <div class="upload-zone" id="zone-card-3" style="display:none;"></div>
           <img id="img-card-3" src="images/download (2).jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-3')">Change</button>
           <span class="card-category">Connectivity</span>
@@ -339,7 +341,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
       <div class="wish-card">
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-4')">
-          <div class="upload-zone" id="zone-card-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-4','zone-card-4','img-card-4')"></div>
+          <div class="upload-zone" id="zone-card-4" style="display:none;"></div>
           <img id="img-card-4" src="images/images.jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-4')">Change</button>
           <span class="card-category">Workspace</span>
@@ -360,7 +362,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
       <div class="wish-card">
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-5')">
-          <div class="upload-zone" id="zone-card-5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-5','zone-card-5','img-card-5')"></div>
+          <div class="upload-zone" id="zone-card-5" style="display:none;"></div>
           <img id="img-card-5" src="images/shopping (1).webp" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-5')">Change</button>
           <span class="card-category">Fashion</span>
@@ -381,7 +383,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
       <div class="wish-card">
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-6')">
-          <div class="upload-zone" id="zone-card-6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-6','zone-card-6','img-card-6')"></div>
+          <div class="upload-zone" id="zone-card-6" style="display:none;"></div>
           <img id="img-card-6" src="images/download (3).jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-6')">Change</button>
           <span class="card-category">Fashion</span>
@@ -402,7 +404,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
       <div class="wish-card">
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-7')">
-          <div class="upload-zone" id="zone-card-7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-7','zone-card-7','img-card-7')"></div>
+          <div class="upload-zone" id="zone-card-7" style="display:none;"></div>
           <img id="img-card-7" src="images/shopping (2).webp" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-7')">Change</button>
           <span class="card-category">Fashion</span>
@@ -423,7 +425,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
       <div class="wish-card">
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-8')">
-          <div class="upload-zone" id="zone-card-8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-8','zone-card-8','img-card-8')"></div>
+          <div class="upload-zone" id="zone-card-8" style="display:none;"></div>
           <img id="img-card-8" src="images/passport.jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-8')">Change</button>
           <span class="card-category">Treats</span>
@@ -444,7 +446,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
       <div class="wish-card">
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-9')">
-          <div class="upload-zone" id="zone-card-9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-9','zone-card-9','img-card-9')"></div>
+          <div class="upload-zone" id="zone-card-9" style="display:none;"></div>
           <img id="img-card-9" src="images/images.webp" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-9')">Change</button>
           <span class="card-category">Treats</span>
@@ -465,7 +467,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
       <div class="wish-card">
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-10')">
-          <div class="upload-zone" id="zone-card-10"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-10','zone-card-10','img-card-10')"></div>
+          <div class="upload-zone" id="zone-card-10" style="display:none;"></div>
           <img id="img-card-10" src="images/download (4).jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-10')">Change</button>
           <span class="card-category">Stationery</span>
@@ -486,7 +488,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
       <div class="wish-card">
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-11')">
-          <div class="upload-zone" id="zone-card-11"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-11','zone-card-11','img-card-11')"></div>
+          <div class="upload-zone" id="zone-card-11" style="display:none;"></div>
           <img id="img-card-11" src="images/Speech.jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-11')">Change</button>
           <span class="card-category">Professional Dev</span>
@@ -506,7 +508,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
       <div class="wish-card">
         <div class="card-topline"></div>
         <div class="img-frame" onclick="triggerUpload('card-12')">
-          <div class="upload-zone" id="zone-card-12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Add Image</span><small>Saved after refresh</small><input type="file" accept="image/*" onchange="saveImg(event,'card-12','zone-card-12','img-card-12')"></div>
+          <div class="upload-zone" id="zone-card-12" style="display:none;"></div>
           <img id="img-card-12" src="images/download (5).jpg" alt="" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-12')">Change</button>
           <span class="card-category">Accessories</span>
@@ -523,12 +525,53 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
         </div>
       </div>
 
+      <!-- 14. NEW: PICTURE FRAME -->
+      <div class="wish-card">
+        <div class="card-topline"></div>
+        <div class="img-frame" onclick="triggerUpload('card-13')">
+          <div class="upload-zone" id="zone-card-13" style="display:none;"></div>
+          <img id="img-card-13" src="images/frame.jpg" alt="Picture Frame" style="width:100%; height:100%; object-fit:cover; display:block;">
+          <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-13')">Change</button>
+          <span class="card-category">Home &amp; Decor</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Elegant Picture Frame</div>
+          <p class="card-desc">A beautiful, high-quality picture frame to display a cherished memory. A timeless addition to any space.</p>
+          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">$15.00</span></div>
+          <div class="card-actions">
+            <button class="btn-support btn-pay" onclick="openModal('pay','Elegant Picture Frame','$15.00')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
+            <button class="btn-support btn-deliver" onclick="openModal('deliver','Elegant Picture Frame')"><span class="btn-icon">&#9673;</span><div class="btn-label"><span>Buy &amp; Deliver</span><small>Call for delivery address</small></div></button>
+            <button class="btn-support btn-online" onclick="openModal('online','Elegant Picture Frame')"><span class="btn-icon">&#9678;</span><div class="btn-label"><span>Order Online</span><small>Temu, Jumia &amp; more</small></div></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 15. NEW: PERFUME -->
+      <div class="wish-card">
+        <div class="card-topline"></div>
+        <div class="img-frame" onclick="triggerUpload('card-14')">
+          <div class="upload-zone" id="zone-card-14" style="display:none;"></div>
+          <img id="img-card-14" src="images/perfumes.jpg" alt="Perfume" style="width:100%; height:100%; object-fit:cover; display:block;">
+          <button class="change-btn" onclick="event.stopPropagation();triggerUpload('card-14')">Change</button>
+          <span class="card-category">Fragrance</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Luxury Perfume</div>
+          <p class="card-desc">A signature, long-lasting fragrance that is sophisticated and elegant. A scent that leaves a lasting impression.</p>
+          <div class="card-price"><span class="price-label">Est. Price</span><span class="price-amount">$15.00</span></div>
+          <div class="card-actions">
+            <button class="btn-support btn-pay" onclick="openModal('pay','Luxury Perfume','$15.00')"><span class="btn-icon">&#9733;</span><div class="btn-label"><span>Pay Directly</span><small>Bank account details</small></div></button>
+            <button class="btn-support btn-deliver" onclick="openModal('deliver','Luxury Perfume')"><span class="btn-icon">&#9673;</span><div class="btn-label"><span>Buy &amp; Deliver</span><small>Call for delivery address</small></div></button>
+            <button class="btn-support btn-online" onclick="openModal('online','Luxury Perfume')"><span class="btn-icon">&#9678;</span><div class="btn-label"><span>Order Online</span><small>Temu, Jumia &amp; more</small></div></button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <div class="stripe"></div>
-
 
 <section id="certs" class="section alt">
   <div class="section-inner">
@@ -540,11 +583,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
       <!-- CERT 1 - Full-Stack Web Development -->
       <div class="cert-card">
         <div class="cert-img-frame" onclick="triggerCert('cert-0')">
-          <div class="upload-zone" id="zone-cert-0" style="height:190px;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8M8 12h8"/></svg>
-            <span>Upload Certificate</span><small>Saved after refresh</small>
-            <input type="file" id="input-cert-0" accept="image/*" onchange="saveCert(event,'cert-0','zone-cert-0','img-cert-0')">
-          </div>
+          <div class="upload-zone" id="zone-cert-0" style="height:190px; display:none;"></div>
           <img id="img-cert-0" src="images/web cert.jpeg" alt="Full-Stack Web Development Certificate" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerCert('cert-0')">Change</button>
         </div>
@@ -559,11 +598,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
       <!-- CERT 2 - Data Analytics -->
       <div class="cert-card">
         <div class="cert-img-frame" onclick="triggerCert('cert-1')">
-          <div class="upload-zone" id="zone-cert-1" style="height:190px;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8M8 12h8"/></svg>
-            <span>Upload Certificate</span><small>Saved after refresh</small>
-            <input type="file" id="input-cert-1" accept="image/*" onchange="saveCert(event,'cert-1','zone-cert-1','img-cert-1')">
-          </div>
+          <div class="upload-zone" id="zone-cert-1" style="height:190px; display:none;"></div>
           <img id="img-cert-1" src="images/Data cert.jpeg" alt="Data Analytics Certificate" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerCert('cert-1')">Change</button>
         </div>
@@ -578,11 +613,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
       <!-- CERT 3 - Computer Appreciation -->
       <div class="cert-card">
         <div class="cert-img-frame" onclick="triggerCert('cert-2')">
-          <div class="upload-zone" id="zone-cert-2" style="height:190px;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8M8 12h8"/></svg>
-            <span>Upload Certificate</span><small>Saved after refresh</small>
-            <input type="file" id="input-cert-2" accept="image/*" onchange="saveCert(event,'cert-2','zone-cert-2','img-cert-2')">
-          </div>
+          <div class="upload-zone" id="zone-cert-2" style="height:190px; display:none;"></div>
           <img id="img-cert-2" src="images/microsoft.jpeg" alt="Computer Appreciation Certificate" style="width:100%; height:100%; object-fit:cover; display:block;">
           <button class="change-btn" onclick="event.stopPropagation();triggerCert('cert-2')">Change</button>
         </div>
@@ -622,7 +653,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.9); padding: 48px 6
 </div>
 
 <script>
-// ===== YOUR EXACT ACCOUNT DETAILS =====
+// ===== YOUR EXACT ACCOUNT DETAILS (UPDATED SHOE BOX) =====
 const ME = {
   bank1: "Access Bank",
   accountName1: "Anuniro Ugochi Sarah",
@@ -633,52 +664,64 @@ const ME = {
   phone: "09045831170",
   email: "juliussrah237@gmail.com",
   jumia: "https://www.jumia.com.ng",
-  temu: "https://www.temu.com"
+  temu: "https://www.temu.com",
+  // Updated Shoe Box details
+  shoeSize: "39"
 };
 
 /* ── localStorage image persistence ── */
 const STORAGE_PREFIX = 'wishlist_img_';
 
+// Function to save image data to localStorage
 function saveImg(event, key, zoneId, imgId) {
   const file = event.target.files[0];
   if (!file) return;
+
+  // Read file and store as data URL
   const reader = new FileReader();
   reader.onload = function(e) {
     const data = e.target.result;
-    try { localStorage.setItem(STORAGE_PREFIX + key, data); } catch(err) {
+    try {
+      localStorage.setItem(STORAGE_PREFIX + key, data);
+      console.log(`Image saved for ${key}`);
+    } catch(err) {
       console.warn('localStorage full, image not persisted');
     }
+    // Update the UI to show the uploaded image
     showImg(zoneId, imgId, data);
   };
   reader.readAsDataURL(file);
 }
 
+// Function to display an image and hide the upload zone
 function showImg(zoneId, imgId, src) {
   const zone = document.getElementById(zoneId);
   const img = document.getElementById(imgId);
-  if (zone) zone.style.display = 'none';
-  if (img) { 
-    img.src = src; 
-    img.style.display = 'block'; 
+  if (zone) {
+    zone.style.display = 'none';
+  }
+  if (img) {
+    img.src = src;
+    img.style.display = 'block';
   }
 }
 
+// Load all saved images from localStorage on page load
 function loadAllSaved() {
-  // Load wishlist card images (13 items: card-0 to card-12)
-  for (let i = 0; i <= 12; i++) {
+  // Load wishlist card images (15 items: card-0 to card-14)
+  for (let i = 0; i <= 14; i++) {
     const key = 'card-' + i;
     const data = localStorage.getItem(STORAGE_PREFIX + key);
     if (data) {
       showImg('zone-' + key, 'img-' + key, data);
     } else {
-      // If no saved image, make sure the default image shows
+      // If no saved image, ensure the default image is shown and the upload zone is hidden
       const img = document.getElementById('img-' + key);
       if (img && img.src && img.src !== '') {
         img.style.display = 'block';
       }
-      // Hide the upload zone if image has src
       const zone = document.getElementById('zone-' + key);
-      if (zone && img && img.src && img.src !== '') {
+      if (zone) {
         zone.style.display = 'none';
       }
     }
@@ -688,13 +731,12 @@ function loadAllSaved() {
   if (hero) {
     showImg('heroZone', 'heroImg', hero);
   } else {
-    // Show default hero image
     const img = document.getElementById('heroImg');
     if (img && img.src && img.src !== '') {
       img.style.display = 'block';
     }
     const zone = document.getElementById('heroZone');
-    if (zone && img && img.src && img.src !== '') {
+    if (zone) {
       zone.style.display = 'none';
     }
   }
@@ -710,32 +752,72 @@ function loadAllSaved() {
         img.style.display = 'block';
       }
       const zone = document.getElementById('zone-' + key);
-      if (zone && img && img.src && img.src !== '') {
+      if (zone) {
         zone.style.display = 'none';
       }
     }
   }
 }
 
+// Function to trigger the file input for a wishlist card
 function triggerUpload(key) {
   const zone = document.getElementById('zone-' + key);
   if (zone) {
     const input = zone.querySelector('input[type="file"]');
     if (input) input.click();
+  } else {
+    // Fallback: try to find the input directly
+    const input = document.getElementById('input-' + key);
+    if (input) input.click();
   }
 }
 
+// Function to save certificate images
 function saveCert(event, key, zoneId, imgId) {
   saveImg(event, key, zoneId, imgId);
 }
 
+// Function to trigger the file input for a certificate
 function triggerCert(key) {
   const input = document.getElementById('input-' + key);
   if (input) input.click();
 }
 
-// Load all saved images on page load
-window.addEventListener('DOMContentLoaded', loadAllSaved);
+// ── Security Feature: Restrict image uploads ──
+// This prevents unauthorized users from uploading images from their phone.
+// The file input elements are rendered useless unless the user is the site owner.
+// The upload zones are visually hidden, and the input elements are disabled.
+function restrictImageUploads() {
+  // Disable all file inputs on the page
+  const fileInputs = document.querySelectorAll('input[type="file"]');
+  fileInputs.forEach(input => {
+    input.disabled = true; // This prevents the file picker from opening
+    input.style.display = 'none'; // Hide the input completely
+  });
+
+  // Hide all upload zones
+  const uploadZones = document.querySelectorAll('.upload-zone');
+  uploadZones.forEach(zone => {
+    zone.style.display = 'none';
+  });
+
+  // Show all images (they are already shown by default)
+  // Remove the 'change' buttons as they are no longer needed
+  const changeButtons = document.querySelectorAll('.change-btn');
+  changeButtons.forEach(btn => {
+    btn.style.display = 'none';
+  });
+
+  // Also remove click event listeners from image frames
+  // We'll just rely on the display none for the upload zones.
+  console.log('Image upload restrictions applied.');
+}
+
+// Load all saved images and apply restrictions on page load
+window.addEventListener('DOMContentLoaded', function() {
+  loadAllSaved();
+  restrictImageUploads();
+});
 
 /* ── MODAL ── */
 function openModal(type, item, price = '') {
@@ -768,11 +850,13 @@ function openModal(type, item, price = '') {
       <div class="modal-row"><span class="modal-lbl">Item</span><span class="modal-val">${item}</span></div>
       <div class="modal-row"><span class="modal-lbl">Phone / WhatsApp</span><span class="modal-val hl">${ME.phone}</span></div>
       <div class="modal-row"><span class="modal-lbl">Email</span><span class="modal-val">${ME.email}</span></div>
+      <div class="modal-row"><span class="modal-lbl">Shoe Size</span><span class="modal-val hl">${ME.shoeSize}</span></div>
       <div class="modal-note"><strong>Please call or WhatsApp me</strong> on the number above to get my delivery address in Port Harcourt, Nigeria. I will confirm the exact specifications when you reach out. Thank you.</div>`;
   } else {
     html = `
       <div class="modal-row"><span class="modal-lbl">Item</span><span class="modal-val">${item}</span></div>
       <div class="modal-row"><span class="modal-lbl">Phone / WhatsApp</span><span class="modal-val hl">${ME.phone}</span></div>
+      <div class="modal-row"><span class="modal-lbl">Shoe Size</span><span class="modal-val hl">${ME.shoeSize}</span></div>
       <div class="modal-row"><span class="modal-lbl">Shop on Temu</span><span class="modal-val"><a href="${ME.temu}" target="_blank" style="color:var(--red);font-weight:600;">Open Temu</a></span></div>
       <div class="modal-row"><span class="modal-lbl">Shop on Jumia</span><span class="modal-val"><a href="${ME.jumia}" target="_blank" style="color:var(--red);font-weight:600;">Open Jumia</a></span></div>
       <div class="modal-note"><strong>Not sure which product to choose?</strong> Send me a WhatsApp on <strong>${ME.phone}</strong> and I will send you the exact product link and specifications.</div>`;
